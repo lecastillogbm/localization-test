@@ -13,9 +13,9 @@ namespace WebAppTest
 
         public LocService(IStringLocalizerFactory factory)
         {
-            var type = typeof(SharedResource);
+            var type = typeof(LocService);
             var assemblyName = new AssemblyName(type.Assembly.FullName);
-            _localizer = factory.Create("SharedResource", assemblyName.Name);
+            _localizer = factory.Create("LocService", assemblyName.Name);
         }
 
         public LocalizedString GetLocalizedHtmlString(string key)
